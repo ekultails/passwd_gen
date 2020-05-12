@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import string
 import random
 import argparse
@@ -12,6 +11,13 @@ number = parser.parse_args()
 # https://stackoverflow.com/questions/16878315/what-is-the-right-way-to-treat-python-argparse-namespace-as-a-dictionary
 
 inputs = vars(number)
+
+conversion = inputs['integer']
+if conversion < 63:
+    pass
+else:
+    print("error")
+    exit(code=1)
 
 passwd = random.sample(string, inputs['integer'])
 print("".join(passwd)) # Prints Password without array
