@@ -16,7 +16,6 @@ conversion = inputs['integer']
 if conversion < 63:
     pass
 else:
-    print("error")
     raise ValueError("Password length greater than 62 is not support at this time")
     exit(code=1)
 
