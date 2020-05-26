@@ -6,11 +6,11 @@ import argparse
 string = string.ascii_letters + string.digits
 parser = argparse.ArgumentParser(description='A basic password generator')
 parser.add_argument('integer', nargs='?', type=int, default=10, help='Add an integer such as 17 to set the length of the password. If none is given, the default will be used')
-number = parser.parse_args()
+arg = parser.parse_args()
 
 # https://stackoverflow.com/questions/16878315/what-is-the-right-way-to-treat-python-argparse-namespace-as-a-dictionary
 
-inputs = vars(number)
+inputs = vars(arg)
 
 arg = inputs['integer']
 
