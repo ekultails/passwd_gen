@@ -15,8 +15,8 @@ arg = parser.parse_args()
 passwd_complexity = False
 inputs = vars(arg)
 
-arg = inputs['integer']
-if arg < 63:
+int = inputs['integer']
+if int < 63:
     pass
 else:
     raise ValueError("Password length greater than 62 is not support at this time")
