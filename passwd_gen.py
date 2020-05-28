@@ -22,9 +22,9 @@ else:
     raise ValueError("Password length greater than 62 is not support at this time")
 
 if passwd_complexity == True:
-    passwd = random.sample(complex_string, inputs['integer'])
+    passwd = random.sample(complex_string, int)
 elif passwd_complexity == False:
-    passwd = random.sample(simple_string, inputs['integer'])
+    passwd = random.sample(simple_string, int) 
 
 print("".join(passwd)) # Prints Password without array
 
