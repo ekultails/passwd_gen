@@ -5,6 +5,6 @@
 
 
 # Thanks
-@vimshady
-MarkS
-@StephenDini
+* @vimshady
+* MarkS
+* @StephenDini
