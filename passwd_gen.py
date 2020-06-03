@@ -17,22 +17,17 @@ passwd_complexity = False
 inputs = vars(arg)
 
 if arg.c:
-    passwd_complexity = True
+    passwd_complexity = simple_string
 else:
-    pass
+    passwd_complexity = complex_string
 
 inputs = vars(arg)
 
 int = inputs['integer']
-if int < 63:
-    pass
-else:
-    raise ValueError("Password length greater than 62 is not support at this time")
+new_password = ""
 
-if passwd_complexity == True:
-    passwd = random.sample(complex_string, int)
-elif passwd_complexity == False:
-    passwd = random.sample(simple_string, int) 
+for i in range(int):
+    random_number = random.randint(0, len(passwd_complexity) - 1)
+    new_password += passwd_complexity[random_number]
 
-print("".join(passwd)) # Prints Password without array
-
+print(new_password)
